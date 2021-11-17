@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <mirrors>
+        <mirror>
+            <mirrorOf>*,!libs-snapshot-ssi</mirrorOf>
+            <name>maven-central</name>
+            <url>http://54.226.101.44:9990/repository/maven-central</url>
+            <id>maven-central</id>
+        </mirror>
+    </mirrors>
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>libs-release</name>
+                    <url>http://54.226.101.44:9990/repository/libs-release</url>
+                </repository>
+                <repository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>http://54.226.101.44:9990/repository/libs-snapshot</url>
+                </repository>
+                <repository>
+                    <id>libs-snapshot-ssi</id>
+                    <url>http://54.226.101.44:9990/repository/libs-snapshot-ssi</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>libs-release</name>
+                    <url>http://54.226.101.44:9990/repository/libs-release</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>http://54.226.101.44:9990/repository/libs-snapshot</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>artifactory</id>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+</settings>
